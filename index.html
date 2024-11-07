@@ -12,6 +12,18 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+        function CallCalendly() {
+            $('#mdCalendly').modal('show');
+        };
+    </script>
     <style>
         /* Container styles */
         .scrolling-text-container {
@@ -68,6 +80,7 @@
                 transform: translateX(0%);
             }
         }
+
         .resiq-landing-section-modal {
             padding-inline: 24px;
             padding-top: 20px;
@@ -78,39 +91,57 @@
 
         .resiq-landing-section-modal {
             &.hero
-            {
-                min-width: 100%;
-                height: 100%;
-                position: relative;
-                overflow: hidden;
-                background: linear-gradient(180deg, rgba(26, 187, 154, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
-            }
+
+        {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(26, 187, 154, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
         }
+
+        }
+
         .resiq-landing-section-modal {
             &.hero
-            {
-                & .content
-                {
-                    & .hero-text
-                    {
-                        text-align: center;
-                    }
-                }
-            }
+
+        {
+            & .content
+
+        {
+            & .hero-text
+
+        {
+            text-align: center;
+        }
+
+        }
+        }
+        }
+
+        .modal {
+            display: none;
+            vertical-align: middle;
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+            box-sizing: border-box;
+            width: 90%;
+            background: #fff;
+            padding: 5px 15px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -o-border-radius: 8px;
+            -ms-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 0 10px #000;
+            -moz-box-shadow: 0 0 10px #000;
+            -o-box-shadow: 0 0 10px #000;
+            -ms-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+            text-align: left;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script>
-        function CallCalendly() {
-            $('#mdCalendly').modal('show');
-        };
-    </script>
 </head>
 
 <body>
@@ -408,7 +439,7 @@
             </div>
         </div>
     </footer>
-    <div id="mdCalendly" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="mdCalendlyLabel" aria-hidden="true" style="min-width: 75%; height: 90%; ">
+    <div id="mdCalendly" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="mdCalendlyLabel" aria-hidden="true" style="min-width: 75%; height: 100%; ">
         <section class="resiq-landing-section-modal hero">
             <div class="content" style="min-width: 100%; height: 100%;">
                 <div class="hero-text" style="min-width: 100%; height: 100%;">
