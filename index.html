@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Container styles */
+        .scrolling-text-container {
+            background-color: #eff5ff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* Inner container styles */
+        .scrolling-text-inner {
+            display: flex;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 0;
+        }
+
+        /* Text styles */
+        .scrolling-text {
+            display: flex;
+        }
+
+        .scrolling-text-item {
+            padding: 0 30px;
+        }
+
+        /* Apply the animation to the text items */
+        .scrolling-text-inner > div {
+            animation: var(--direction) var(--marquee-speed) linear infinite;
+        }
+
+        /* Pause the animation when a user hovers over it */
+        .scrolling-text-container:hover .scrolling-text-inner > div {
+            animation-play-state: paused;
+        }
+
+        /* Setting the Animation using Keyframes */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        .resiq-landing-section-modal {
+            padding-inline: 24px;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .resiq-landing-section-modal {
+            &.hero
+            {
+                min-width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                background: linear-gradient(180deg, rgba(26, 187, 154, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
+            }
+        }
+        .resiq-landing-section-modal {
+            &.hero
+            {
+                & .content
+                {
+                    & .hero-text
+                    {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+        function CallCalendly() {
+            $('#mdCalendly').modal('show');
+        };
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <img src="images/wordmarks/wordmark_green.svg" />
+            <button class="btn btn-primary" onclick="CallCalendly(); return false;">
+                <span>Talk with us</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="resiq-landing-section hero">
+        <div class="content">
+            <div class="hero-text">
+                <h1>Turbocharge your resource planning capabilities.</h1>
+                <p>
+                    Enhance your project management and resource allocation using our free and open-source AI-powered tools,
+                    hosted on
+                    Microsoft Azure.
+                </p>
+            </div>
+            <!--Schedule a free call with us-->
+            <button class="btn btn-primary" onclick="CallCalendly(); return false;">
+                <span>
+                    Schedule a free call with us
+                </span>
+            </button>
+            <img class="dashboard-img" src="images/resiq_dashboard.png" />
+        </div>
+        <img class="bg-graph" src="images/resiq_graph.svg" />
+    </section>
+    <section class="resiq-landing-section clients">
+        <div class="content">
+            <div class="client-images-carousel">
+                <div class="client-images-reel">
+                    <div class="scrolling-text-inner" style="--marquee-speed: 25s; --direction:scroll-left" role="marquee">
+                        <div class="scrolling-text">
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Govt-of-india-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/IPG-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Microsoft-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/MTV-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/NBC-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/New-York-Times-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/The-Times-Group-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/time-warner-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Aditya-Birla-Group-Logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Comcast-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Disney-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/General-Mills-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Network-18-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Kaiser-Permanente-logo.jpg" />
+                            </div>
+                        </div>
+                        <div class="scrolling-text">
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Govt-of-india-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/IPG-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Microsoft-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/MTV-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/NBC-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/New-York-Times-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/The-Times-Group-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/time-warner-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Aditya-Birla-Group-Logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Comcast-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Disney-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/General-Mills-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Network-18-logo.jpg" />
+                            </div>
+                            <div class="scrolling-text-item">
+                                <img src="images/clients/Kaiser-Permanente-logo.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="resiq-landing-section features">
+        <div class="content">
+            <div class="feature">
+                <div class="feature-text">
+                    <small>Programs & Projects</small>
+                    <h2>View all your organization’s projects in one place.</h2>
+                    <p>
+                        Get a sense of the big picture with a view of all your projects. Import or export project information to
+                        ensure others know in the most optimal format based on their needs.
+                    </p>
+                </div>
+                <img src="images/resiq_programs_projects.png" />
+            </div>
+            <div class="feature">
+                <div class="feature-text">
+                    <small>Resources</small>
+                    <h2>Manage project requirements and resource allocations.</h2>
+                    <p>
+                        Understand your team members’ schedules and weekly allocations per project, and assess whether your project
+                        has enough allocated people to get the job done.
+                    </p>
+                </div>
+                <img src="images/resiq_resources.png" />
+            </div>
+
+            <div class="feature">
+                <div class="feature-text">
+                    <small>Allocations</small>
+                    <h2>Make the right calls for who a project needs.</h2>
+                    <p>Understand the skills and bandwidth each team member has when deciding who to assign to a project.</p>
+                </div>
+                <img src="images/resiq_allocations.png" />
+            </div>
+        </div>
+    </section>
+
+    <section class="resiq-landing-section experience">
+        <div class="content">
+            <div class="card">
+                <img src="images/integration.svg" />
+                <div class="card-text">
+                    <h3>Simplicity and Streamlined Integration</h3>
+                    <p>
+                        ResIQ’s intuitive design minimizes learning curves, accelerates
+                        user adoption, and allows teams to integrate seamlessly into daily operations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/reporting.svg" />
+                <div class="card-text">
+                    <h3>Transparent Executive Reporting</h3>
+                    <p>
+                        ResIQ includes real-time, executive-ready reporting for C-suite transparency, providing
+                        visually clear summaries and actionable insights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="resiq-landing-section ai">
+        <div class="content">
+            <div class="ai-text">
+                <h1>Elevate your workflow with AI.</h1>
+                <p>
+                    By using ResIQ’s proprietary AI software specifically tailored for resource planning, organizations gain a
+                    competitive advantage through precise forecasting, optimized resource allocation, and refined cost management.
+                    Unlike generic solutions, ResIQ’s AI provides unique insights and decision-making power, helping ensure
+                    operational efficiency and strategic alignment.
+                </p>
+                <button class="btn btn-primary btn-light">
+                    <span onclick="CallCalendly(); return false;">
+                        Talk with us
+                    </span>
+                </button>
+            </div>
+            <div class="ai-logo-container">
+                <div class="ai-logo">
+                    <img src="images/ai_logo.svg" />
+                </div>
+            </div>
+        </div>
+        <img class="line" src="images/lines/ai_green.svg" />
+        <img class="line" src="images/lines/ai_white.svg" />
+    </section>
+
+    <section class="resiq-landing-section partner">
+        <div class="content">
+            <div class="power-brands">
+                <div class="power-brand">
+                    <p>Powered by</p>
+                    <img src="images/atidan_grey.svg" />
+                </div>
+                <div class="power-brand">
+                    <p>Hosted on</p>
+                    <img src="images/azure_grey.svg" />
+                </div>
+            </div>
+            <div class="partner-text">
+                <h1>Brought to you with the reliability of a Microsoft Partner.</h1>
+                <p>
+                    As a Microsoft Gold Partner for over 10 years, Atidan Technologies brings proven expertise to ResIQ,
+                    leveraging Microsoft’s cloud capabilities to deliver a reliable, secure, and innovative solution tailored to
+                    organizations seeking an edge in resource management.
+                </p>
+            </div>
+            <img class="gold-partner-img" src="images/gold_partner.png" />
+            <div class="power-ctas">
+                <button class="btn btn-primary" onclick="CallCalendly(); return false;">
+                    <span>Talk with us</span>
+                </button>
+                <a href="https://atidantech.com/" target="_blank" class="btn btn-text">
+                    <span>Learn more about Atidan</span>
+                    <span class="material-icons">&#xe89e;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="resiq-landing-section open-source">
+        <div class="content">
+            <div class="open-source-text">
+                <h2>Entirely open source and <span>forever free</span>.</h2>
+                <p>We provide our software at no charge.</p>
+                <p>
+                    Our platform is accessible, modifiable, and free to use, allowing you to customize it to fit your needs and
+                    adapt it as your project develops.
+                </p>
+            </div>
+            <div class="open-source-img-container">
+                <img class="open-source-img" src="images/open_source.svg" />
+            </div>
+        </div>
+    </section>
+
+    <section class="resiq-landing-section last-call">
+        <div class="content">
+            <div class="last-call-text">
+                <h1>Want to learn more? Schedule a free consultation!</h1>
+                <p>
+                    Book your free, unlimited access to ResIQ and get a complimentary 30-minute consulting session to get you
+                    started!
+                </p>
+                <button class="btn btn-primary btn-light" onclick="CallCalendly(); return false;">
+                    <span>Schedule a free call with us</span>
+                </button>
+            </div>
+        </div>
+        <img class="line" src="images/lines/ai_green.svg" />
+        <img class="line" src="images/lines/ai_white.svg" />
+    </section>
+    <footer class="footer footer-dark">
+        <div class="footer-content">
+            <img src="images/wordmarks/wordmark_light.svg" />
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="CallCalendly(); return false;">Talk with us</a>
+                <a href="https://www.google.com/intl/en/policies/privacy/" class="footer-link" target="_blank">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <div id="mdCalendly" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="mdCalendlyLabel" aria-hidden="true" style="min-width: 75%; height: 90%; ">
+        <section class="resiq-landing-section-modal hero">
+            <div class="content" style="min-width: 100%; height: 100%;">
+                <div class="hero-text" style="min-width: 100%; height: 100%;">
+                    <img src="images/wordmarks/wordmark_green.svg" />
+                    <h1>We d love to work with you!</h1>
+                    <p>
+                        Please schedule a time to chat with us so we can set you on a path to success with ResIQ
+                    </p>
+                    <div style="min-width: 90%; height: 100%;">
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/ankesh-slide?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width: 100%; height: 100%;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
